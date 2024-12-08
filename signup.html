@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration or Sign Up Form</title>
+    <link rel="stylesheet" href="signupcss.css">
+    <link rel="stylesheet" href="rscss.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Registration</h2>
+      <form id="signupForm">
+        <div class="input-box">
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <input type="password" id="password" placeholder="Create password" required>
+        </div>
+        <div class="input-box">
+          <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+        </div>
+        <div class="policy">
+          <input type="checkbox" required>
+          <h3>I accept all terms & conditions</h3>
+        </div>
+        <div class="input-box button">
+          <input type="submit" value="Register Now">
+        </div>
+        <div class="text">
+          <h3>Already have an account? <a href="login.html">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+
+    <!-- Registration Success Popup -->
+    <div id="successPopup" class="popup" style="display: none;">
+      <div class="popup-box">
+        <h2>Success!</h2>
+        <p>Your registration was successful.</p>
+        <button id="loginButton">Log In</button>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to handle form submission and show popup
+
+      const signupForm = document.getElementById('signupForm');
+      const successPopup = document.getElementById('successPopup');
+      const loginButton = document.getElementById('loginButton');
+
+      // Function to show the success popup
+      function showSuccessPopup() {
+        successPopup.style.display = 'flex'; // Show the success popup
+      }
+
+      // Handle form submission
+      signupForm.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent actual form submission
+
+        // Collect form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+          alert("Passwords do not match!");
+          return;
+        }
+
+        // Send signup data to backend
+        const response = await fetch('http://localhost:5000/api/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: name,
+            email: email,
+            password: password,
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // If registration is successful, show the success popup
+          showSuccessPopup();
+        } else {
+          // Show an error message if the registration failed
+          alert(data.message || 'Something went wrong!');
+        }
+      });
+
+      // Handle the "Log In" button click
+      loginButton.addEventListener('click', () => {
+        successPopup.style.display = 'none'; // Hide the popup
+        window.location.href = 'login.html'; // Redirect to the login page
+      });
+    </script>
+  </body>
+</html>

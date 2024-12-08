@@ -1,0 +1,335 @@
+/* Navbar */
+ul {list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    font-family: Arial;}
+
+li {float: left;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 10px;}
+
+li a {display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 25px 14px 25px;
+    text-decoration: none;}
+
+li:last-child {border-right: none;}
+
+li a:hover {border-radius: 10px;
+    border-style: solid;}
+
+.active {background-color: red;
+    border-radius: 10px;}   
+
+.active1 {border-style: solid;
+    border-radius: 10px;}
+
+.active1:hover {border-style: solid;
+    background-color: white;
+    color: black;
+    border-radius: 10px;}
+
+/* Image Head */
+
+.imghead {height: 525px;}
+
+/* Body */
+
+body {background-color: black;
+    background-size: auto;
+    background-repeat: no-repeat;}
+
+/* Text */
+
+h1 {font-family: arial;
+    text-align: center;
+    color: white;}
+
+h2 {font-family: arial;
+    text-align: center;
+    color: white;}
+
+h3 {font-family: arial;
+    text-align: center;
+    color: rgb(0, 0, 0);}
+
+h3.h3 {font-family: arial;
+    text-align: center;
+    color: rgb(255, 255, 255);}
+
+.head3 {font-family: arial;
+    text-align: center;
+    color: rgb(255, 255, 255);}
+
+.par3 {font-family: arial;
+    text-align: justify;
+    color: white;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;}
+    
+p {font-family: arial;
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;}
+
+.p2 {font-family: arial;
+    text-align: center;
+    color: white;
+    font-size: 16px;}
+
+/* Badge */
+
+.badge {background-color: red;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;}    
+    
+.badge2 {background-color: green;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;}  
+
+/* Card Container */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;} 
+
+.card {
+    width: 225px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.2);
+    margin: 25px;}
+
+.card img {
+    width: 100%;
+    height: auto;}
+
+.card-content {
+    font-family: Arial;}
+
+.card-content h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+    line-height: 0.20;}
+
+.card-content .price {
+    color: green;
+    font-size: 18px;
+    line-height: 0.75;
+}
+
+.card-content p {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.25;}
+
+.card-content .btnskewer {
+    display: inline-block;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(218, 218, 218);
+    text-decoration: none;
+    text-align: center;
+    width: 100%;}
+
+.card-content .btnskewer:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);}
+
+/* About*/
+
+.about {border: 1.5px none;
+    padding: 5px;}
+
+/* Image */
+
+.img2 {float: left;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;}
+
+.clearfix {overflow: auto;}
+
+/* Cart */
+
+.cart {margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);}
+
+.cart1 {float: right;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 14px 25px 14px 25px;
+    text-decoration: none;
+    font-family: arial;
+}
+
+/* Pop-up Chat */
+
+* {box-sizing: border-box;}
+
+
+.open-button {background-color: rgb(109, 109, 109);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    opacity: 0.8;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;}
+  
+
+.chat-popup {display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    border-radius: 10px;}
+  
+.form-container {max-width: 300px;
+    padding: 10px;
+    background-color: white;
+    font-family: arial;}
+  
+
+.form-container textarea {width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #dedede;
+    resize: none;
+    min-height: 200px;
+    font-family: arial;}
+  
+.form-container textarea:focus {background-color: #dedede;
+    outline: none;}
+  
+.form-container .btn {background-color: green;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;}
+  
+.form-container .cancel {background-color: rgb(255, 0, 0);
+    border-radius: 10px;}
+  
+.form-container .btn:hover, .open-button:hover {border-style: solid;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;}
+  
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;}
+  
+input[type=submit]:hover {
+    background-color: #45a049;}
+  
+.container {border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;}
+
+ /* Card*/
+.card-container2 {display: flex;
+    justify-content: center;
+    flex-wrap: wrap;} 
+    
+.card2 {width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.2);
+    margin: 25px;}
+    
+.card2 img {width: 100%;
+    height: auto;}
+    
+.card-content2 {font-family: Arial;}
+    
+.card-content2 h3 {font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+    line-height: 0.20;}
+    
+.card-content2 .price {color: green;
+    font-size: 18px;
+    line-height: 0.75;}
+    
+.card-content2 p {color: black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.25;}
+    
+.card-content2 .btnskewer {
+    display: inline-block;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(218, 218, 218);
+    text-decoration: none;
+    text-align: center;
+    width: 100%;}
+    
+.card-content2 .btnskewer:hover {background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);}
+
+/* Video */
+
+.video {padding-left: 50px;
+    padding-top: 15px;}
+
+.video2 {padding-right: 50px;
+    padding-top: 15px;}
+
+/* Column */
+.column { float: left;
+    width: 50%;}
+  
+.row:after {content: "";
+    display: table;
+    clear: both;}
+
+
+

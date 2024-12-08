@@ -1,0 +1,177 @@
+/* General reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background-color: #f9f9f9;
+  color: #000000;
+  padding: 30px;
+}
+
+li a {float: right;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  padding: 14px 25px 14px 25px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  border-width: 10px;
+  text-decoration: none;}
+
+/* Header Styling */
+h1, h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Product List */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.product {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.product p {
+  font-size: 16px;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.product button {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product button:hover {
+  background-color: green;
+  margin-top: 20px;
+}
+
+#buyNowBtn {
+  padding: 14px 25px 14px 25px;
+  border-radius: 8px;
+  border:green;
+  background-color:green;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+/* Cart Styling */
+.cart {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart ul {
+  list-style-type: none;
+}
+
+.cart ul li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.cart p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Receipt Popup Styling */
+.receipt-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+}
+
+.receipt h2 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+}
+
+.receipt ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.receipt ul li {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.receipt p {
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+}
+
+.receipt button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.receipt button:hover {
+  background-color: #218838;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .receipt-container {
+    width: 95%;
+  }
+}
